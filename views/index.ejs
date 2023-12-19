@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+    <form action="/enviar" method="post">
+        <input type="text" name="titulo"> <br>
+        <textarea name="contenido" id="" cols="30" rows="10"></textarea> <br>
+        <input type="submit" value="Enviar">
+        <link rel="stylesheet" href="styles.css">
+    </form>
+    <h1>Notas</h1>
+    <% notas.forEach(function(nota){%>
+        <div>
+            <h2><%= nota.titulo %></h2>
+            <p><%= nota.contenido %></p>
+        </div>
+    <%})%>
+</body>
+</html>
