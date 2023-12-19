@@ -3,9 +3,10 @@ const app = express()
 const mongoose = require("mongoose")
 const {Schema,model} = require("mongoose")
 const db = mongoose.connection
+const uri = process.env.MONGO_URI
 require('dotenv').config()
 
-mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
+mongoose.connect(uri)
 db.once("open",()=>{
     console.log("Conetado a la base de datos")
 })
