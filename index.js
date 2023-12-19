@@ -6,6 +6,7 @@ const db = mongoose.connection
 const uri = process.env.MONGO_URI
 require('dotenv').config()
 
+
 mongoose.connect(uri)
 db.once("open",()=>{
     console.log("Conetado a la base de datos")
