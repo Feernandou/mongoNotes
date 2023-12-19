@@ -21,6 +21,7 @@ const noteSchema = new Schema({
 const Note = model("Nota",noteSchema)
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+
 app.use(express.static("public"))
 app.set("view engine","ejs")
 
