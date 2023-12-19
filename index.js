@@ -5,7 +5,7 @@ const {Schema,model} = require("mongoose")
 const db = mongoose.connection
 require('dotenv').config()
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 db.once("open",()=>{
     console.log("Conetado a la base de datos")
 })
